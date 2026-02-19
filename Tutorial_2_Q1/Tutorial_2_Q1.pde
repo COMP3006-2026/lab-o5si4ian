@@ -1,3 +1,8 @@
+void setup() {
+  size(400, 400);
+}
+
+
 // Button properties
 int button1X = 100, button1Y = 100, buttonWidth = 100, buttonHeight = 50;
 int button2X = 100, button2Y = 170;
@@ -8,10 +13,6 @@ color gray = color(128);
 color button1Color = gray;
 color button2Color = gray;
 color button3Color = gray;
-
-void setup() {
-  size(400, 400);
-}
 
 void draw() {
   background(255);

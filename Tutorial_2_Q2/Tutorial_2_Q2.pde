@@ -4,7 +4,7 @@ int cellSize = 30;
 
 void setup() {
   size(400, 400);
-  noLoop(); // Stop continuous drawing
+  //noLoop(); // Stop continuous drawing
 }
 
 void draw() {
