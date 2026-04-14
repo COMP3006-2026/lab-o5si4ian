@@ -1,19 +1,20 @@
- void setup() {
+void setup() {
   size(800, 600, P3D);
 }
 
 void draw() {
   background(0);
   
-  // Enable 3D rotation to view the circle
+  // Translate to center of screen
+  translate(width/2, height/2, 0);
+  
+  // Rotate the shape based on mouse position
   rotateX(map(mouseY, 0, height, -PI, PI));
   rotateY(map(mouseX, 0, width, -PI, PI));
   
-  // Draw filled circle at mouse position
-  pushMatrix();
-  translate(mouseX, mouseY, 0);
+  
+  // Draw filled circle at center
   fill(255, 0, 0);
   noStroke();
-  sphere(50); // Using sphere as a 3D circle
-  popMatrix();
+  circle(0,0,100);
 }

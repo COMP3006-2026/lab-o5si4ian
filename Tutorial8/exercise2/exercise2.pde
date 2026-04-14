@@ -5,20 +5,17 @@ void setup() {
 void draw() {
   background(0);
   
+  translate(width/2, height/2, 0);
   // Enable 3D rotation
   rotateX(map(mouseY, 0, height, -PI, PI));
   rotateY(map(mouseX, 0, width, -PI, PI));
-  
-  // Draw pentagon at mouse position
-  pushMatrix();
-  translate(mouseX, mouseY, 0);
-  
+
   // Draw filled pentagon
   beginShape();
   fill(0, 255, 0);
   noStroke();
   
-  float radius = 50;
+  float radius = 100;
   for (int i = 0; i < 5; i++) {
     float angle = TWO_PI / 5 * i - HALF_PI; // -HALF_PI to point one vertex up
     float x = cos(angle) * radius;
@@ -27,5 +24,4 @@ void draw() {
   }
   
   endShape(CLOSE);
-  popMatrix();
 }

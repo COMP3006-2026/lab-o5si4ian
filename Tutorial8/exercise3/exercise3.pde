@@ -12,9 +12,12 @@ void setup() {
 void draw() {
   background(0);
   
-  // Draw pentagon at mouse position
-  pushMatrix();
-  translate(mouseX - width/2, mouseY - height/2, 0);
+  // Translate to center of screen (in world coordinates)
+  translate(0, 0, 0);
+  
+  // Rotate the shape based on mouse position
+  rotateX(map(mouseY, 0, height, -PI, PI));
+  rotateY(map(mouseX, 0, width, -PI, PI));
   
   beginShape();
   fill(0, 255, 0);
@@ -29,5 +32,4 @@ void draw() {
   }
   
   endShape(CLOSE);
-  popMatrix();
 }
